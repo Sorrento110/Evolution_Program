@@ -1,7 +1,92 @@
 import java.util.*;
 
 public class Main {
+
 	public static void main(String[] args)
+	{
+        Utils utilityFac = new Utils();
+		Vector<Vector<Animal>> fauna = new Vector<Vector<Animal>>();
+        for(int i = 0; i < utilityFac.randomNumInt(3, 10); i++)
+        {
+            Vector<Animal> species = new Vector<Animal>();
+            Animal newAn = new Animal();
+            for(int j = 0; j < utilityFac.randomNumInt(10, 500); j++)
+            {
+                species.add(newAn);
+            }
+            fauna.add(species);
+        }
+
+        for( Vector<Animal> Vecc : fauna)
+        {
+            int number = 0;
+            for(int i = 0; i < Vecc.size(); i++)
+            {
+                if(i < 1)
+                {
+                    System.out.println(Vecc.elementAt(0).toString());
+                    number++;
+                }
+                else
+                {
+                    number++;
+                }
+            }
+            System.out.println(number);
+        }
+
+        Animal newAn = new Animal();
+        System.out.println(newAn.toString());
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	//Interactive main method. Currently Deprecated.
+	/*public static void main(String[] args)
 	{
 		int asize=0;
 		Animal[][] fauna=new Animal[10][100];
@@ -43,5 +128,5 @@ public class Main {
 	void reproduce(Animal one, Animal two)
 	{
 		
-	}
+	}*/
 }
