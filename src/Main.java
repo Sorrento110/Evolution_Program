@@ -2,6 +2,8 @@ import java.util.*;
 
 public class Main {
 
+    private Vector<Animal> sortedFauna = new Vector<Animal>();
+
 	public static void main(String[] args)
 	{
         Utils utilityFac = new Utils();
@@ -12,6 +14,7 @@ public class Main {
             Animal newAn = new Animal();
             for(int j = 0; j < utilityFac.randomNumInt(10, 500); j++)
             {
+                newAn.initiativeGen();
                 species.add(newAn);
             }
             fauna.add(species);
@@ -35,10 +38,25 @@ public class Main {
             System.out.println(number);
         }
 
-        Animal newAn = new Animal();
-        System.out.println(newAn.toString());
+        Environment world = new Environment(fauna);
 
 	}
+
+	public void sortAnimals(Vector<Vector<Animal>> A)
+    {
+        for(Vector<Animal> aniVec : A)
+        {
+            for (Animal live : aniVec)
+            {
+                sortedFauna.addElement(live);
+            }
+        }
+    }
+
+    public void eatCycle(Environment E, Vector<Vector<Animal>> A)
+    {
+
+    }
 
 
 

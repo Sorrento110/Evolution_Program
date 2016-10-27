@@ -43,7 +43,6 @@ public class Animal {
 			strength=10.0;
 		}
 		reproduction=u.randomNumD(.1, 2.0);
-		initiative=u.randomNumD(1.0,5.0);
         evolvechance = u.randomNumD(.0001, .75);
 	}
 	public Animal(String nme, int sze, int ft)
@@ -113,6 +112,11 @@ public class Animal {
 		}
 		String saltStr = salt.toString();
 		return saltStr;
+	}
+
+	public void initiativeGen()
+	{
+		initiative = u.randomNumD(1.0,5.0);
 	}
 
 
